@@ -1,18 +1,31 @@
 import './main.scss';
 import './index.html';
 
+interface MyHTMLElement extends HTMLElement {
+  requestFullscreen(): Promise<void>;
+  mozRequestFullScreen(): Promise<void>;
+  webkitRequestFullscreen(): Promise<void>;
+  msRequestFullscreen(): Promise<void>;
+  webkitEnterFullscreen(): Promise<void>;
+  webkitSupportsFullscreen?: boolean;
+}
+
 window.onload = () => {
-  const video = document.getElementById('video');
-  const allBtn = document.getElementById('all-btn');
-  const videoBtn = document.getElementById('video-btn');
-  const debug = document.getElementById('debug');
+  const body = document.body as MyHTMLElement;
+  const video = document.getElementById('video') as MyHTMLElement;
+  const allBtn = document.getElementById('all-btn') as MyHTMLElement;
+  const videoBtn = document.getElementById('video-btn') as MyHTMLElement;
+  const debug = document.getElementById('debug') as MyHTMLElement;
+
+  const videoElement = document.getElementById('video') as HTMLVideoElement;
+  videoElement.play();
   
   const setDebug = msg => {
     console.log(msg);
     debug.innerText = msg;
   }
 
-  const fullScreenEnable = (element) => {
+  const fullScreenEnable = (element: MyHTMLElement) => {
     if (element.requestFullscreen) {
       element.requestFullscreen();
       setDebug('Все нормальные браузеры');
@@ -33,6 +46,6 @@ window.onload = () => {
     }
   }
 
-  allBtn.addEventListener('click', () => fullScreenEnable(document.body));
+  allBtn.addEventListener('click', () => fullScreenEnable(body));
   videoBtn.addEventListener('click', () => fullScreenEnable(video));
 }
