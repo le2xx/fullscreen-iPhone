@@ -16,9 +16,6 @@ window.onload = () => {
   const allBtn = document.getElementById('all-btn') as MyHTMLElement;
   const videoBtn = document.getElementById('video-btn') as MyHTMLElement;
   const debug = document.getElementById('debug') as MyHTMLElement;
-
-  const videoElement = document.getElementById('video') as HTMLVideoElement;
-  videoElement.play();
   
   const setDebug = msg => {
     console.log(msg);
