@@ -66,3 +66,8 @@ npm run github:build:deploy
 ## Todo
 
 * Add css autoprefixer
+
+## Links
+https://developer.apple.com/documentation/webkit/safari_tools_and_features/delivering_video_content_for_safari
+
+https://developer.apple.com/documentation/webkitjs/htmlvideoelement/1633500-webkitenterfullscreen
