@@ -2,14 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Simple frontend starter kit</title>
+    <title>iPhone/iPad fullscreen video</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <div class="app">
-      <h1 class="title">App is started!</h1>
-      <img class="usd" src="assets/images/usd1.jpg" alt="usd">
+      <h1 class="title">iPhone/iPad fullscreen video</h1>
+
+      <div class="video-wrap">
+        <video id="video"
+               src="/assets/video/video.mp4"
+               controls="controls"
+               class="video">
+        </video>
+      </div>
+
+      <h2 id="debug" class="debug">111</h2>
+
+      <div id="all-btn" class="btn">All document</div>
+      <div id="video-btn" class="btn right">Only video</div>
     </div>
   </body>
 </html>

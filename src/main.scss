@@ -3,6 +3,7 @@
 
 body {
   background: $bg-color;
+  font-family: Arial ,sans-serif;
   margin: 0;
 }
 
@@ -12,16 +13,48 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 
   .title {
     color: #204220;
-    font-size: 40px;
+    font-size: 24px;
     line-height: 160%;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
   }
 
-  .usd {
-    height: 124px;
-    width: 300px;
+  .video-wrap {
+    height: 190px;
+    width: 340px;
+
+    .video {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .debug {
+    font-size: 18px;
+    color: #ff5100;
+  }
+
+  .btn {
+    background: yellow;
+    border-radius: 5px;
+    bottom: 30px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 40px;
+    height: 40px;
+    left: 30px;
+    position: fixed;
+    text-align: center;
+    user-select: none;
+    width: 100px;
+
+    &.right {
+      left: unset;
+      right: 30px;
+    }
   }
 }
